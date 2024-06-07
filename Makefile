@@ -2,7 +2,7 @@
 NAME=	crfile
 VERSION=	1.0
 DISTFILES=	crfile-src.tar.gz
-LICENSE=	
+LICENSE=	./LICENSE
 PLIST_FILES=	usr/bin/crfile
 
 all: clean do-test do-build
