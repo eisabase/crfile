@@ -8,9 +8,9 @@ PLIST_FILES=	usr/bin/crfile
 all: clean do-test do-build
 
 do-test:
-	gcc -c -Wall -Wextra -Wpedantic -g3 -Og -std=c99 *.c
+	cc -c -Wall -Wextra -Wpedantic -g3 -Og -std=c99 *.c
 do-build:
-	gcc -o crfile -pipe -O2 -std=c99 *.c
+	cc -o crfile -pipe -O2 -std=c99 *.c
 clean:
 	-rm crfile *.o
 install:
