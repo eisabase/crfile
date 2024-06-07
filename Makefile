@@ -1,0 +1,21 @@
+# Makefile
+NAME=	crfile
+VERSION=	1.0
+DISTFILES=	crfile-src.tar.gz
+LICENSE=	
+PLIST_FILES=	usr/bin/crfile
+
+all: clean do-test do-build
+
+do-test:
+	gcc -c -Wall -Wextra -Wpedantic -g3 -Og -std=c99 *.c
+do-build:
+	gcc -o crfile -pipe -O2 -std=c99 *.c
+clean:
+	-rm crfile *.o
+install:
+	cp ./crfile /usr/bin/crfile && rm crfile *.o
+uninstall:
+	rm /usr/bin/crfile
+remove:
+	rm /usr/bin/crfile
