@@ -8,12 +8,16 @@
 #ifndef O_TMPFILE
 #if defined(__alpha__)
 #define __O_TMPFILE 0100000000
+#define O_TMPFILE 0100000000
 #elif defined(__parisc__) || defined(__hppa__)
 #define __O_TMPFILE 0400000000
+#define O_TMPFILE 0400000000
 #elif defined(__sparc__) || defined(__sparc64__)
 #define __O_TMPFILE 0x2000000
+#define O_TMPFILE 0x2000000
 #else
 #define O_TMPFILE 020000000
+#define __O_TMPFILE 020000000
 #endif
 #endif
 #include <unistd.h>
